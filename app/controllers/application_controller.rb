@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/baked_goods/most_expensive' do
-    baked_good = BakedGood.all.order("price DESC").first
-    baked_good.to_json
+    baked_goods = BakedGood.all.order("price DESC").first
+    baked_goods.to_json
   end
 end
